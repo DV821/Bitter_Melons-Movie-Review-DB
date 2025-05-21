@@ -31,7 +31,7 @@ Bitter Melons is an independent, SQL-based review aggregation system that redefi
 - **Language**: SQL (DDL, DML, Views, Functions, Procedures, Triggers)
 
 ## 🖼️ ER Diagram (Simplified)
-{}
+![ER Diagram](https://github.com/DV821/Bitter_Melons-Movie-Review-DB/blob/main/ER%20Diagram.png)
 
 
 ## 📊 Example Queries
@@ -47,8 +47,9 @@ Bitter Melons is an independent, SQL-based review aggregation system that redefi
 2. Import the schema SQL file into MySQL
 3. Run `CALL table_creation();` and `CALL master_table_insertions();`
 4. Use `CALL migrate_movies_data();` to migrate movies data
-5. Use and `CALL migrate_reviews_data_all(batch, size);` for data loading
-6. Explore predefined views and test sample queries
+5. Use `CALL assign_batches_auto(batch);` to automate batch creation of unmigrated records
+6. Use `CALL migrate_reviews_data_all(batch_no, size);` in multiple connections with different batch numbers for concurrent and faster data migration
+7. Explore predefined views and test sample queries
 
 ## 📚 License & Acknowledgements
 
@@ -60,5 +61,5 @@ Bitter Melons is an independent, SQL-based review aggregation system that redefi
 
 ## 📬 Contact
 
-For questions or collaborations, feel free to reach out via GitHub or email.
+For questions or collaborations, feel free to reach out via GitHub or email on dharmikvara62@gmail.com
 
